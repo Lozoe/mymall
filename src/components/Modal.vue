@@ -27,7 +27,6 @@ export default {
   },
   watch: {
     mdShow (val) {
-      debugger
       this.$emit('input')
     }
   },

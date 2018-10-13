@@ -119,7 +119,7 @@
             <router-link class="btn btn--m" to="/address">Previous</router-link>
           </div>
           <div class="next-btn-wrap">
-            <button class="btn btn--m btn--red" @click="payMent">Proceed to payment</button>
+            <button class="btn btn--m btn--olive" @click="payMent">Proceed to payment</button>
           </div>
         </div>
       </div>

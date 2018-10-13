@@ -116,7 +116,7 @@
               </div>
             </div>
             <div class="next-btn-wrap">
-              <router-link class="btn btn--m btn--red" v-bind:to="{path:'orderConfirm',query:{'addressId':selectedAddrId}}">Next</router-link>
+              <router-link class="btn btn--m btn--olive" v-bind:to="{path:'orderConfirm',query:{'addressId':selectedAddrId}}">Next</router-link>
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@
         </p>
         <div slot="btnGroup">
             <a class="btn btn--m" href="javascript:;" @click="delAddress">确认</a>
-            <a class="btn btn--m btn--red" href="javascript:;" @click="isMdShow=false">取消</a>
+            <a class="btn btn--m btn--olive" href="javascript:;" @click="isMdShow=false">取消</a>
         </div>
       </modal>
       <modal :mdShow="isMdShow2" @close="isMdShow2=false">
@@ -135,7 +135,7 @@
           地址列表至少需要有一条数据,已无法继续删除.
         </p>
         <div slot="btnGroup">
-          <a class="btn btn--m btn--red" href="javascript:;" @click="isMdShow2=false">好的</a>
+          <a class="btn btn--m btn--olive" href="javascript:;" @click="isMdShow2=false">好的</a>
         </div>
       </modal>
       <nav-footer></nav-footer>

@@ -33,7 +33,7 @@
       line-height: 20px;
   }
   .bread-wrap span{
-      color:#d1434a;
+      color:#baa749;
   }
 </style>
 <script>

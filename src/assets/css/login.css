@@ -122,15 +122,15 @@ a {
   display: block;
   height: 38px;
   line-height: 38px;
-  border: 2px solid #009de6;
-  background: #009de6;
+  border: 2px solid #72b1e0;
+  background: #72b1e0;
   color: #fff;
   font-size: 18px;
   text-align: center;
 }
 .btn-login:hover {
-  background: #61b1ef;
-  border: 2px solid #61b1ef;
+  background: #8cc1eb;
+  border: 2px solid #8cc1eb;
 }
 .error-wrap .error{
   font-size: 12px;

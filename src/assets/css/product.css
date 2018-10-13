@@ -19,7 +19,7 @@
 }
 
 .accessory-list > ul > li:hover {
-  border-color: #ee7a23;
+  border-color: #ff915e;
   -webkit-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   transform: translateY(-5px);
@@ -80,7 +80,7 @@
 .accessory-list .main .price {
   float: left;
   line-height: 30px;
-  color: #d1434a;
+  color: #baa749;
   font-size: 1.25em;
 }
 
@@ -248,7 +248,7 @@
 }
 
 .filter dd a:hover, .filter dd .cur {
-  color: #ee7a23;
+  color: #ff915e;
 }
 
 .filter .filter-category ul {
@@ -270,7 +270,7 @@
 }
 
 .filter .filter-category a:hover .icon-arrow-down {
-  fill: #ee7a23;
+  fill: #ff915e;
   -webkit-transition: -webkit-transform .3s ease-out;
   transition: -webkit-transform .3s ease-out;
   transition: transform .3s ease-out;
@@ -302,7 +302,7 @@
 .filter .filter-price dd a:hover, .filter .filter-price dd .cur {
   -webkit-transition: padding-left .3s ease-out;
   transition: padding-left .3s ease-out;
-  border-left: 2px solid #ee7a23;
+  border-left: 2px solid #ff915e;
   padding-left: 15px;
 }
 
@@ -384,7 +384,7 @@
 }
 
 .search-result-wrap .search-result-num strong {
-  color: #d1434a;
+  color: #baa749;
 }
 
 .accessory-result {
@@ -420,7 +420,7 @@
 }
 
 .filter-nav a.cur, .filter-nav a:hover {
-  color: #ee7a23;
+  color: #ff915e;
 }
 
 .filter-nav .sort-up .icon-arrow-short {
@@ -513,11 +513,11 @@
 }
 
 .accessory-title .accessory-more-link:hover {
-  color: #ee7a23;
+  color: #ff915e;
 }
 
 .accessory-title .accessory-more-link:hover .icon-arrow-short {
-  fill: #ee7a23;
+  fill: #ff915e;
 }
 
 .accessory-classify {

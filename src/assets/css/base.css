@@ -243,11 +243,11 @@ table {
 }
 
 .font-color-red {
-  color: #d1434a;
+  color: #baa749;
 }
 
 .font-color-orange {
-  color: #ee7a23;
+  color: #ff915e;
 }
 
 .font-color-gray {
@@ -419,7 +419,7 @@ a {
 }
 
 a:hover {
-  color: #d1434a;
+  color: #baa749;
   -webkit-transition: color .3s ease-out;
   transition: color .3s ease-out;
 }
@@ -458,11 +458,11 @@ a:hover {
 }
 
 .nav-breadcrumb a:hover {
-  color: #d1434a;
+  color: #baa749;
 }
 
 .nav-breadcrumb span {
-  color: #d1434a;
+  color: #baa749;
 }
 
 /** 普通页面标题 **/
@@ -612,15 +612,15 @@ a:hover {
   font-weight: bold;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
-  border: 1px solid #d1434a;
-  color: #d1434a;
+  border: 1px solid #baa749;
+  color: #baa749;
   text-transform: uppercase;
   letter-spacing: .25em;
   white-space: nowrap;
 }
 
 .btn:hover, .btn[href]:hover {
-  background-color: #ffe5e6;
+  background-color: rgba(242, 227, 181, 0.6);
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
 }
@@ -634,6 +634,18 @@ a:hover {
 .btn--red:hover, .btn--red[href]:hover {
   background-color: #f16f75;
   border-color: #f16f75;
+  color: #fff;
+}
+
+.btn--olive, .btn--olive[href] {
+  background-color: #baa749;
+  border-color: #baa749;
+  color: #fff;
+}
+
+.btn--olive:hover, .btn--olive[href]:hover {
+  background-color: rgba(186, 167, 73, 0.8);
+  border-color: rgba(186, 167, 73, 0.8);
   color: #fff;
 }
 
@@ -656,7 +668,7 @@ a:hover {
 }
 
 .up-down-btn {
-  color: #ee7a23;
+  color: #ff915e;
 }
 
 .i-up-down {
@@ -680,7 +692,7 @@ a:hover {
   top: 0;
   width: 8px;
   height: 1px;
-  background: #ee7a23;
+  background: #ff915e;
 }
 
 .i-up-down .i-up-down-l {
@@ -858,8 +870,8 @@ textarea {
 }
 
 .checkbox-btn.checked {
-  background-color: #ee7a23;
-  border-color: #ee7a23;
+  background-color: #ff915e;
+  border-color: #ff915e;
 }
 
 .checkbox-btn.checked .icon-ok {
@@ -867,8 +879,8 @@ textarea {
 }
 
 .checkbox-btn.orange.checked {
-  background-color: #ee7a23;
-  border-color: #ee7a23;
+  background-color: #ff915e;
+  border-color: #ff915e;
 }
 
 /** header and footer **/
@@ -1196,7 +1208,7 @@ html {
 .md-modal .icon-status-ok {
   width: 20px;
   height: 20px;
-  fill: #ee7a23;
+  fill: #ff915e;
   vertical-align: middle;
   margin-right: 15px;
 }

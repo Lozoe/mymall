@@ -126,7 +126,7 @@
                 Item total: <span class="total-price">{{totalPrice | currency('$')}}</span>
               </div>
               <div class="btn-wrap">
-                <a class="btn btn--red" v-bind:class="{'btn--dis':checkedCount==0}" @click="checkOut">Checkout</a>
+                <a class="btn btn--olive" v-bind:class="{'btn--dis':checkedCount==0}" @click="checkOut">Checkout</a>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@
       <p slot="message">你确认要删除此条数据吗?</p>
       <div slot="btnGroup">
         <a class="btn btn--m" href="javascript:;" @click="delCart">确认</a>
-        <a class="btn btn--m btn--red" href="javascript:;" @click="modalConfirm = false">关闭</a>
+        <a class="btn btn--m btn--olive" href="javascript:;" @click="modalConfirm = false">关闭</a>
       </div>
     </Modal>
     <nav-footer></nav-footer>
