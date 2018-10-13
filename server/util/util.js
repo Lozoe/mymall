@@ -1,5 +1,5 @@
 /**
- * Created by jacksoft on 17/4/26.
+ * Created by Lozoe on 18/8/26.
  */
 Date.prototype.Format = function (fmt) {
   var o = {

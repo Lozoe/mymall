@@ -4,10 +4,10 @@ var mongoose = require('mongoose')
 var Goods = require('../models/goods')
 
 // 连接MongoDB数据库
-mongoose.connect('mongodb://127.0.0.1:27017/mymall') 
+mongoose.connect('mongodb://127.0.0.1:27017/mymall')
 
 // 账号密码连接
-// mongoose.connect('mongodb://root:123456@127.0.0.1:27017/dumall') 
+// mongoose.connect('mongodb://root:123456@127.0.0.1:27017/dumall')
 
 // 连接成功
 mongoose.connection.on('connected', () => {
@@ -38,7 +38,7 @@ router.get('/test', (req, res, next) => {
     switch (priceLevel) {
       case '0':
         priceGt = 0
-        priceLte=100
+        priceLte = 100
         break
       case '1':
         priceGt = 100
@@ -56,14 +56,14 @@ router.get('/test', (req, res, next) => {
     params = {
       // $gt >  &lte <=
       salePrice: {
-          $gt: priceGt,
-          $lte: priceLte
+        $gt: priceGt,
+        $lte: priceLte
       }
     }
   }
   let goodsModel = Goods.find(params).skip(skip).limit(pageSize)
-  goodsModel.sort({'salePrice': sort})
-  goodsModel.exec((err,doc) => {
+  goodsModel.sort({ salePrice: sort })
+  goodsModel.exec((err, doc) => {
     if (err) {
       res.json({
         status: 1,
@@ -111,34 +111,34 @@ router.get('/list', (req, res, next) => {
   let priceLte = ''
   let params = {}
   if (priceLevel != 'all') {
-    switch (priceLevel){
+    switch (priceLevel) {
       case '0':
         priceGt = 0
-        priceLte=100
+        priceLte = 100
         break
       case '1':
         priceGt = 100
-        priceLte=500
+        priceLte = 500
         break
       case '2':
         priceGt = 500
-        priceLte=1000
+        priceLte = 1000
         break
       case '3':
         priceGt = 1000
-        priceLte=5000
+        priceLte = 5000
         break
     }
     params = {
-      salePrice:{
-          $gt: priceGt,
-          $lte: priceLte
+      salePrice: {
+        $gt: priceGt,
+        $lte: priceLte
       }
     }
   }
   let goodsModel = Goods.find(params).skip(skip).limit(pageSize)
-  goodsModel.sort({'salePrice': sort})
-  goodsModel.exec((err,doc) => {
+  goodsModel.sort({ salePrice: sort })
+  goodsModel.exec((err, doc) => {
     if (err) {
       res.json({
         status: 1,
@@ -159,43 +159,43 @@ router.get('/list', (req, res, next) => {
 
 // 加入购物车
 router.post('/addCart', (req, res, next) => {
-  let userId = '100000077'
+  let userId = req.cookies.userId
   let productId = req.body.productId
   let User = require('../models/user')
   User.findOne({ userId }, (err, userDoc) => {
-    if (err){
-      res.json({ 
-          status: '1',
-          msg: err.message
+    if (err) {
+      res.json({
+        status: '1',
+        msg: err.message
       })
     } else {
-      console.log(`userDoc: ${userDoc}`);
+      console.log(`userDoc: ${userDoc}`)
       if (userDoc) {
-        var goodsItem = '';
+        var goodsItem = ''
         userDoc.cartList.forEach(item => {
           if (item.productId == productId) {
             goodsItem = item
-            item.productNum ++
+            item.productNum++
           }
         })
         if (goodsItem) {
           userDoc.save((err2, doc2) => {
             if (err2) {
               res.json({
-                status:"1",
-                msg:err2.message
+                status: '1',
+                msg: err2.message
               })
-            }else{
+            } else {
               res.json({
-                status:'0',
-                msg:'',
-                result:'suc'
+                status: '0',
+                msg: '',
+                result: 'suc'
               })
             }
           })
         } else {
           Goods.findOne({ productId }, (err, doc) => {
-            if( err) {
+            if (err) {
               res.json({
                 status: '1',
                 msg: err.message
@@ -213,12 +213,12 @@ router.post('/addCart', (req, res, next) => {
                 })
 
                 userDoc.save((err2, doc2) => {
-                  if(err2) {
+                  if (err2) {
                     res.json({
                       status: '1',
                       msg: err2.message
                     })
-                  }else{
+                  } else {
                     res.json({
                       status: '0',
                       msg: '',
