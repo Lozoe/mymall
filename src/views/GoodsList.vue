@@ -68,10 +68,10 @@
           </svg>
           <span>加入购物车成!</span>
         </p>
-        <div slot="btnGroup">
+        <template slot="btnGroup">
           <a class="btn btn--m" href="javascript:;" @click="mdShowCart = false">继续购物</a>
           <router-link class="btn btn--m btn--olive" href="javascript:;" to="/cart">查看购物车</router-link>
-        </div>
+        </template>
       </modal>
       <div class="md-overlay" v-show="overLayFlag" @click.stop="closePop"></div>
       <nav-footer></nav-footer>

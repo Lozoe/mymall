@@ -1208,7 +1208,7 @@ html {
 .md-modal .icon-status-ok {
   width: 20px;
   height: 20px;
-  fill: #ff915e;
+  fill: rgba(186, 167, 73, 0.8);
   vertical-align: middle;
   margin-right: 15px;
 }
